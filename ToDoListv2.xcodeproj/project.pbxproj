@@ -14,6 +14,7 @@
 		071540991B5BC9F800E4E598 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071540981B5BC9F800E4E598 /* Images.xcassets */; };
 		0715409C1B5BC9F800E4E598 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0715409A1B5BC9F800E4E598 /* LaunchScreen.xib */; };
 		071540A81B5BC9F800E4E598 /* ToDoListv2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071540A71B5BC9F800E4E598 /* ToDoListv2Tests.swift */; };
+		071540B21B5BCFE800E4E598 /* ItemsMenager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071540B11B5BCFE800E4E598 /* ItemsMenager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		071540A11B5BC9F800E4E598 /* ToDoListv2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListv2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		071540A61B5BC9F800E4E598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		071540A71B5BC9F800E4E598 /* ToDoListv2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListv2Tests.swift; sourceTree = "<group>"; };
+		071540B11B5BCFE800E4E598 /* ItemsMenager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsMenager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				071540911B5BC9F800E4E598 /* FirstViewController.swift */,
 				071540931B5BC9F800E4E598 /* SecondViewController.swift */,
 				071540951B5BC9F800E4E598 /* Main.storyboard */,
+				071540B11B5BCFE800E4E598 /* ItemsMenager.swift */,
 				071540981B5BC9F800E4E598 /* Images.xcassets */,
 				0715409A1B5BC9F800E4E598 /* LaunchScreen.xib */,
 				0715408D1B5BC9F800E4E598 /* Supporting Files */,
@@ -217,6 +220,7 @@
 			files = (
 				071540941B5BC9F800E4E598 /* SecondViewController.swift in Sources */,
 				071540901B5BC9F800E4E598 /* AppDelegate.swift in Sources */,
+				071540B21B5BCFE800E4E598 /* ItemsMenager.swift in Sources */,
 				071540921B5BC9F800E4E598 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
