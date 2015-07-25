@@ -50,9 +50,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
         if(editingStyle == UITableViewCellEditingStyle.Delete) {
-            let logItemToDelete = items[indexPath.row]
+            let itemToDelete = items[indexPath.row]
             
-            itemsMgr.deleteItem(logItemToDelete)
+            itemsMgr.deleteItem(itemToDelete)
             
             self.fetchData()
             
