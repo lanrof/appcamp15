@@ -40,6 +40,18 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if(editingStyle == UITableViewCellEditingStyle.Delete) {
+            itemsMgr.items.removeAtIndex(indexPath.row)
+            ItemsTableView.reloadData()
+        }
+    }
+    
+    
+    
+    
+    
     
 }
 
