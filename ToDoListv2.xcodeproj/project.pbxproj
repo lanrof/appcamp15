@@ -16,6 +16,7 @@
 		071540A81B5BC9F800E4E598 /* ToDoListv2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071540A71B5BC9F800E4E598 /* ToDoListv2Tests.swift */; };
 		071540B21B5BCFE800E4E598 /* ItemsMenager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071540B11B5BCFE800E4E598 /* ItemsMenager.swift */; };
 		07E5F0AB1B63723E00B4BDC5 /* ToDoListv2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07E5F0A91B63723E00B4BDC5 /* ToDoListv2.xcdatamodeld */; };
+		07E5F0DE1B63831300B4BDC5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5F0DD1B63831300B4BDC5 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		071540A71B5BC9F800E4E598 /* ToDoListv2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListv2Tests.swift; sourceTree = "<group>"; };
 		071540B11B5BCFE800E4E598 /* ItemsMenager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsMenager.swift; sourceTree = "<group>"; };
 		07E5F0AA1B63723E00B4BDC5 /* ToDoListv2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoListv2.xcdatamodel; sourceTree = "<group>"; };
+		07E5F0DD1B63831300B4BDC5 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = ToDoListv2/Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 		071540811B5BC9F800E4E598 = {
 			isa = PBXGroup;
 			children = (
+				07E5F0DD1B63831300B4BDC5 /* Item.swift */,
 				0715408C1B5BC9F800E4E598 /* ToDoListv2 */,
 				071540A41B5BC9F800E4E598 /* ToDoListv2Tests */,
 				0715408B1B5BC9F800E4E598 /* Products */,
@@ -225,6 +228,7 @@
 				07E5F0AB1B63723E00B4BDC5 /* ToDoListv2.xcdatamodeld in Sources */,
 				071540901B5BC9F800E4E598 /* AppDelegate.swift in Sources */,
 				071540B21B5BCFE800E4E598 /* ItemsMenager.swift in Sources */,
+				07E5F0DE1B63831300B4BDC5 /* Item.swift in Sources */,
 				071540921B5BC9F800E4E598 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

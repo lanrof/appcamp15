@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var items = [Item]()
+    
     @IBOutlet weak var ItemsTableView: UITableView!
     
     override func viewDidLoad() {
@@ -26,16 +29,20 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewWillAppear(animated)
         
         ItemsTableView.reloadData()
+        fetchData()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemsMgr.items.count
+        return items.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "CellId")
-        cell.textLabel!.text = itemsMgr.items[indexPath.row].name
-        cell.detailTextLabel!.text = itemsMgr.items[indexPath.row].details
+        
+        let item = items[indexPath.row]
+        
+        cell.textLabel!.text = item.name
+        cell.detailTextLabel!.text = item.details
         
         return cell
     }
@@ -43,11 +50,34 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
         if(editingStyle == UITableViewCellEditingStyle.Delete) {
-            itemsMgr.items.removeAtIndex(indexPath.row)
-            ItemsTableView.reloadData()
+            let logItemToDelete = items[indexPath.row]
+            
+            itemsMgr.deleteItem(logItemToDelete)
+            
+            self.fetchData()
+            
         }
     }
     
+    func fetchData() {
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let menageContext = appDelegate.managedObjectContext!
+        
+        let fetchRequest = NSFetchRequest(entityName: "Item")
+        var error : NSError?
+        let fetchResults = menageContext.executeFetchRequest(fetchRequest, error: &error) as? [Item]
+        
+        if let results = fetchResults {
+            items = results
+        }
+        else {
+            println("Could not fetch \(error), \(error?.userInfo)")
+        }
+        
+        ItemsTableView.reloadData()
+        
+    }
     
     
     

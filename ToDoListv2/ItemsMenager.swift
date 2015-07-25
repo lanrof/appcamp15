@@ -6,7 +6,8 @@
 //  Copyright (c) 2015 Appcamp. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import CoreData
 
 var itemsMgr : ItemsMenager = ItemsMenager()
 
@@ -20,7 +21,36 @@ class ItemsMenager : NSObject {
     var items = [item]()
     
     func addItem(name : String, details : String) {
-        items.append(item(name : name, details : details))
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let menageContext = appDelegate.managedObjectContext!
+        
+        let entity = NSEntityDescription.entityForName("Item", inManagedObjectContext: menageContext)
+        let itemMO = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: menageContext)
+        
+        itemMO.setValue(name, forKey: "name")
+        itemMO.setValue(details, forKey: "details")
+        
+        var error : NSError?
+        
+        if !menageContext.save(&error) {
+            println("Could not save! \(error) \(error?.userInfo)")
+        }
+        
+    }
+    
+    func deleteItem(item : Item) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let menageContext = appDelegate.managedObjectContext!
+    
+        
+        // Delete it from the managedObjectContext
+        menageContext.deleteObject(item)
+        
+        var error : NSError?
+        
+        if !menageContext.save(&error) {
+            println("Could not delete item! \(error) \(error?.userInfo)")
+        }
     }
     
     
