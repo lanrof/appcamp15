@@ -28,14 +28,25 @@
                                 </button>
                             </items>
                         </group>
+                        <slider width="1" alignment="left" continuous="YES" value="100" maximum="1000" steps="10" id="Fah-zb-BJe">
+                            <connections>
+                                <action selector="sliderChanged:" destination="AgC-eL-Hgc" id="m1L-sd-2zo"/>
+                            </connections>
+                        </slider>
                         <button width="1" alignment="left" title="Add" id="Wcu-h1-89w">
                             <connections>
                                 <action selector="addButtonTapped" destination="AgC-eL-Hgc" id="eyE-Ej-Zcy"/>
                             </connections>
                         </button>
+                        <button width="1" alignment="left" title="Hide slider" id="33t-4v-cFX">
+                            <connections>
+                                <action selector="hideSlider" destination="AgC-eL-Hgc" id="DQc-Kt-8RN"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="caloriesLabel" destination="Us8-RI-L22" id="G4J-MU-Bip"/>
+                        <outlet property="slider" destination="Fah-zb-BJe" id="ZWE-Hh-6Jx"/>
                     </connections>
                 </controller>
             </objects>
