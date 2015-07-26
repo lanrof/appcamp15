@@ -43,14 +43,21 @@
                                 <action selector="hideSlider" destination="AgC-eL-Hgc" id="DQc-Kt-8RN"/>
                             </connections>
                         </button>
+                        <group width="1" alignment="left" id="gAm-l5-d3t">
+                            <items>
+                                <label width="53" alignment="left" text="So far:" id="Hzz-7e-IE5"/>
+                                <label alignment="left" text="Label" id="aLI-z1-ybC"/>
+                            </items>
+                        </group>
                     </items>
                     <connections>
                         <outlet property="caloriesLabel" destination="Us8-RI-L22" id="G4J-MU-Bip"/>
                         <outlet property="slider" destination="Fah-zb-BJe" id="ZWE-Hh-6Jx"/>
+                        <outlet property="soFarLabel" destination="aLI-z1-ybC" id="GQf-13-NRn"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="220" y="344.75"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -67,6 +74,30 @@
                 </notificationController>
             </objects>
             <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BGD-LB-gbQ">
+            <objects>
+                <glanceController bottomTemplateType="body2LargeBody2Footer" id="DpH-bb-oSM" customClass="GlanceController" customModule="CaloriesCounter_WatchKit_Extension">
+                    <items>
+                        <group alignment="left" id="o65-UA-s2p">
+                            <items>
+                                <label alignment="left" text="Calories Counter" id="wUV-9J-yVJ"/>
+                            </items>
+                        </group>
+                        <label alignment="left" text="You can eat" id="MeX-yg-6Wd"/>
+                        <label alignment="left" text="1234" id="5Ia-pA-Uf4">
+                            <color key="textColor" red="1" green="0.0099468241870000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label alignment="left" text="more calories today" id="ptx-m7-hU2"/>
+                        <label alignment="left" text="Footer" id="et2-2W-IKD"/>
+                    </items>
+                    <connections>
+                        <outlet property="caloriesLeftLabel" destination="5Ia-pA-Uf4" id="k3z-EQ-9Fn"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="432" y="345"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">

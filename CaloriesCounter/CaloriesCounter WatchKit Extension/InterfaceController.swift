@@ -15,6 +15,8 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var caloriesLabel: WKInterfaceLabel!
     @IBOutlet weak var slider: WKInterfaceSlider!
     
+    @IBOutlet weak var soFarLabel: WKInterfaceLabel!
+    
     var calories : Int = 100
     var caloriesTotal : Int = 0
     var isHidden : Bool = false
@@ -28,6 +30,11 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        caloriesTotal = defaults.integerForKey("caloriesTotal")
+        soFarLabel.setText("\(caloriesTotal)")
+        
     }
 
     override func didDeactivate() {
@@ -49,11 +56,16 @@ class InterfaceController: WKInterfaceController {
     
     @IBAction func addButtonTapped() {
         caloriesTotal = caloriesTotal + calories
+        updateScreen()
+        
+        var defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setValue(caloriesTotal, forKey: "caloriesTotal")
+        
     }
     
     func updateScreen() {
         caloriesLabel.setText("\(calories)")
-      
+        soFarLabel.setText("\(caloriesTotal)")
     }
     
     @IBAction func hideSlider() {
