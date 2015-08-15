@@ -20,6 +20,7 @@
 		07C82ACC1B651C130095420B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C82ACA1B651C130095420B /* Interface.storyboard */; };
 		07C82ACE1B651C130095420B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C82ACD1B651C130095420B /* Images.xcassets */; };
 		07C82AD11B651C130095420B /* Maps WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 07C82AB91B651C130095420B /* Maps WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		07D9BF601B7F325700C0B793 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D9BF5F1B7F325700C0B793 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		07C82AC91B651C130095420B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07C82ACB1B651C130095420B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		07C82ACD1B651C130095420B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		07D9BF5F1B7F325700C0B793 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D9BF601B7F325700C0B793 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +113,7 @@
 		07C82A841B651C030095420B = {
 			isa = PBXGroup;
 			children = (
+				07D9BF5F1B7F325700C0B793 /* CoreLocation.framework */,
 				07C82A8F1B651C030095420B /* Maps */,
 				07C82AA81B651C030095420B /* MapsTests */,
 				07C82ABA1B651C130095420B /* Maps WatchKit Extension */,
@@ -645,6 +649,7 @@
 				07C82AB11B651C030095420B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07C82AB21B651C030095420B /* Build configuration list for PBXNativeTarget "MapsTests" */ = {
 			isa = XCConfigurationList;
@@ -653,6 +658,7 @@
 				07C82AB41B651C030095420B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07C82AD21B651C130095420B /* Build configuration list for PBXNativeTarget "Maps WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -661,6 +667,7 @@
 				07C82AD41B651C130095420B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07C82AD51B651C130095420B /* Build configuration list for PBXNativeTarget "Maps WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -669,6 +676,7 @@
 				07C82AD71B651C130095420B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

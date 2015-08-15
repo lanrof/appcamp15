@@ -11,11 +11,16 @@
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Maps_WatchKit_App" customModuleProvider="target">
                     <items>
                         <map height="100" alignment="left" id="Yvg-pi-49M"/>
-                        <slider width="1" alignment="left" value="10" maximum="10" steps="10" id="Eyp-QG-sVe">
+                        <slider width="1" alignment="left" value="100" maximum="100" steps="10" id="Eyp-QG-sVe">
                             <connections>
                                 <action selector="mapResize:" destination="AgC-eL-Hgc" id="LX7-6M-8Rm"/>
                             </connections>
                         </slider>
+                        <button width="1" alignment="left" title="Button" id="ZG8-hE-EWq">
+                            <connections>
+                                <action selector="GetNewCoordinates" destination="AgC-eL-Hgc" id="7g5-mf-MEg"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="map" destination="Yvg-pi-49M" id="bLB-ua-laa"/>
@@ -23,6 +28,7 @@
                     </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="-120" y="440"/>
         </scene>
     </scenes>
 </document>

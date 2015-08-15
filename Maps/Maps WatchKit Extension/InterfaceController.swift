@@ -17,7 +17,10 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var slider: WKInterfaceSlider!
     
     var zoom : Float = 0.1
-    var maxZoom : Float = 1.0
+    var maxZoom : Float = 10.0
+    
+    var coordX = 54.44321
+    var coordY = 18.5600
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -52,7 +55,7 @@ class InterfaceController: WKInterfaceController {
     @IBAction func mapResize(value: Float) {
         zoom = value
         
-        let location = CLLocationCoordinate2D(latitude: 54.44321, longitude: 18.5600)
+        let location = CLLocationCoordinate2D(latitude: self.coordX, longitude: self.coordY)
         let span = MKCoordinateSpan(latitudeDelta: Double(maxZoom - zoom / 10), longitudeDelta: Double(maxZoom - zoom / 10))
         
         let region = MKCoordinateRegion(center: location, span: span)
@@ -66,6 +69,34 @@ class InterfaceController: WKInterfaceController {
     }
     
     
+    @IBAction func GetNewCoordinates() {
+        
+        
+        WKInterfaceController.openParentApplication(["Coordinates" : "get coordinates"], reply: { (reply, error) -> Void in
+            
+            if let responseMessage = reply as? [String : Double], coordX = responseMessage["CoordinateX"], coordY = responseMessage["CoordinateY"] {
+                //println(responseMessage)
+                //self.messageLabel.setText(responseMessage)
+                
+                self.coordX = coordX
+                self.coordY = coordY
+            }
+        })
+        
+        let location = CLLocationCoordinate2D(latitude: self.coordX, longitude: self.coordY)
+        let span = MKCoordinateSpan(latitudeDelta: Double(maxZoom - zoom / 10), longitudeDelta: Double(maxZoom - zoom / 10))
+        
+        let region = MKCoordinateRegion(center: location, span: span)
+        
+        
+        map.setRegion(region)
+        map.addAnnotation(location, withPinColor: WKInterfaceMapPinColor.Red)
+        
+        
+        slider.setValue(zoom)
+        
+        
+    }
     
     
     

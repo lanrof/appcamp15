@@ -303,6 +303,7 @@
 					};
 					07DB5B9F1B7F22F20016C9E6 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 2B7PA75W9Z;
 					};
 				};
 			};
@@ -580,6 +581,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -588,6 +591,7 @@
 				INFOPLIST_FILE = "project1 WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -598,10 +602,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				IBSC_MODULE = project1_WatchKit_Extension;
 				INFOPLIST_FILE = "project1 WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -651,6 +658,7 @@
 				07DB5B8B1B7F22B90016C9E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07DB5B8C1B7F22B90016C9E6 /* Build configuration list for PBXNativeTarget "project1Tests" */ = {
 			isa = XCConfigurationList;
@@ -659,6 +667,7 @@
 				07DB5B8E1B7F22B90016C9E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07DB5BAF1B7F22F20016C9E6 /* Build configuration list for PBXNativeTarget "project1 WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -667,6 +676,7 @@
 				07DB5BB11B7F22F20016C9E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07DB5BB21B7F22F20016C9E6 /* Build configuration list for PBXNativeTarget "project1 WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -675,6 +685,7 @@
 				07DB5BB41B7F22F20016C9E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

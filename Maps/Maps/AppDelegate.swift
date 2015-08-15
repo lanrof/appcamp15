@@ -8,15 +8,29 @@
 
 import UIKit
 import CoreData
+import CoreLocation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
     var window: UIWindow?
-
+    let locationManager = CLLocationManager()
+    var coordinatesX = 0.0
+    var coordinatesY = 0.0
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        locationManager.requestAlwaysAuthorization()
+        locationManager.delegate = self
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+            
+        }
+        
         return true
     }
 
@@ -106,6 +120,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!)
+    {
+        let coordinates = manager.location.coordinate
+        coordinatesX = coordinates.latitude
+        coordinatesY = coordinates.longitude
+        println("location: \(coordinates.latitude) \(coordinates.longitude)")
+        
+    }
 
+    func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
+        
+        
+        reply(["CoordinateX" : locationManager.location.coordinate.latitude, "CoordinateY" : locationManager.location.coordinate.longitude])
+      
+    }
+    
+    
 }
+
+
+
+
+
+
+
+
 
