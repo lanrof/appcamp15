@@ -106,6 +106,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
+        
+        if let infoDictionary = userInfo as? [String : String],
+            name = infoDictionary["Name"]
+        {
+            reply(["Message" : "Hello \(name)"])
+        }
+    }
 
 }
 

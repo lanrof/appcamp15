@@ -14,6 +14,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "07DB5B9F1B7F22F20016C9E6"
+               BuildableName = "project1 WatchKit App.app"
+               BlueprintName = "project1 WatchKit App"
+               ReferencedContainer = "container:project1.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "07DB5B661B7F22B90016C9E6"
                BuildableName = "project1.app"
                BlueprintName = "project1"
@@ -23,14 +37,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "07DB5B7E1B7F22B90016C9E6"
-               BuildableName = "project1Tests.xctest"
-               BlueprintName = "project1Tests"
+               BlueprintIdentifier = "07DB5B921B7F22F20016C9E6"
+               BuildableName = "project1 WatchKit Extension.appex"
+               BlueprintName = "project1 WatchKit Extension"
                ReferencedContainer = "container:project1.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,23 +56,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "07DB5B7E1B7F22B90016C9E6"
-               BuildableName = "project1Tests.xctest"
-               BlueprintName = "project1Tests"
-               ReferencedContainer = "container:project1.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "07DB5B661B7F22B90016C9E6"
-            BuildableName = "project1.app"
-            BlueprintName = "project1"
+            BlueprintIdentifier = "07DB5B9F1B7F22F20016C9E6"
+            BuildableName = "project1 WatchKit App.app"
+            BlueprintName = "project1 WatchKit App"
             ReferencedContainer = "container:project1.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -72,16 +76,27 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/project1">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "07DB5B661B7F22B90016C9E6"
-            BuildableName = "project1.app"
-            BlueprintName = "project1"
+            BlueprintIdentifier = "07DB5B9F1B7F22F20016C9E6"
+            BuildableName = "project1 WatchKit App.app"
+            BlueprintName = "project1 WatchKit App"
             ReferencedContainer = "container:project1.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "07DB5B9F1B7F22F20016C9E6"
+            BuildableName = "project1 WatchKit App.app"
+            BlueprintName = "project1 WatchKit App"
+            ReferencedContainer = "container:project1.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -91,16 +106,27 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/project1">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "07DB5B661B7F22B90016C9E6"
-            BuildableName = "project1.app"
-            BlueprintName = "project1"
+            BlueprintIdentifier = "07DB5B9F1B7F22F20016C9E6"
+            BuildableName = "project1 WatchKit App.app"
+            BlueprintName = "project1 WatchKit App"
             ReferencedContainer = "container:project1.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "07DB5B9F1B7F22F20016C9E6"
+            BuildableName = "project1 WatchKit App.app"
+            BlueprintName = "project1 WatchKit App"
+            ReferencedContainer = "container:project1.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

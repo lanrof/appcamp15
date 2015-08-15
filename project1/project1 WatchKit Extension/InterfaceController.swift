@@ -12,6 +12,7 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var messageLabel: WKInterfaceLabel!
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -28,4 +29,15 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func buttonOperation() {
+        WKInterfaceController.openParentApplication(["Name" : "Łukasz"], reply: { (reply, error) -> Void in
+            
+            if let responseMessage = reply["Message"] as? String {
+                println(responseMessage)
+                self.messageLabel.setText(responseMessage)
+            }
+        })
+    }
+    
+    
 }
